@@ -6,6 +6,6 @@ public class MetaModelRepresntation {
 
 	
 	private WebhookRequest originalRequest;
-	private String entityType
-	private QueryType queryType;
+	private String entityType;
+	private String queryType;
 }

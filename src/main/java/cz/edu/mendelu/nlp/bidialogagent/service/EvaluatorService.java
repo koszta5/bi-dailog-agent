@@ -9,8 +9,8 @@ import cz.edu.mendelu.nlp.bidialogagent.model.MetaModelRepresntation;
 @Service
 public class EvaluatorService {
 
-	public QueryValidationResult validateQuery(MetaModelRepresntation request) {
-		
+	public String validateQuery(MetaModelRepresntation request) {
+		return null;
 	}
 	
 }
