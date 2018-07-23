@@ -124,14 +124,11 @@ public class EntityTypeCache implements LoadingCache<String, EntityType>, Initia
 	@Override
 	public void afterPropertiesSet() throws Exception {
 		final EntityTypeCache selfRef = this;
+		loadEntityTypes();
 		embeddedCache = CacheBuilder.newBuilder().build(new CacheLoader<String, EntityType>() {
 
 			@Override
 			public EntityType load(String arg0) throws Exception {
-				if (!loaded) {
-					selfRef.loadEntityTypes();
-					loaded = true;
-				}
 				return selfRef.get(arg0);
 
 			}
