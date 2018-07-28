@@ -1,4 +1,4 @@
-package cz.edu.mendelu.nlp.bidialogagent.dialogflow.cache;
+package cz.edu.mendelu.nlp.bidialogagent.controller;
 
 import java.util.List;
 import java.util.Map;

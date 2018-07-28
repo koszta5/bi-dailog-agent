@@ -28,14 +28,13 @@ public class SimpleArchiver implements RequestArchiver {
 	
 	@Override
 	public void archive(WebHookRequestJson request) {
-		String fileName = "request_archive "+ new Date().getTime() +"_" +".json";
+		String fileName = "request_archive_"+ new Date().getTime() +".json";
 		archiveToBeFlushed.put(fileName, request);
 	}
 
 	public void doArchive(String fileName, WebHookRequestJson archiveMe){
-		Path currentRelativePath = Paths.get("");
-		String curreDir = currentRelativePath.toAbsolutePath().toString();
-		String file = curreDir + "/src/test/resources/archive/" + fileName;
+		
+		String file = PathUtils.getTestArchiveDir() + fileName;
 		try {
 			FileUtils.writeStringToFile(new File(file), marshaller.writeValueAsString(archiveMe), Charset.defaultCharset());
 		} catch (Exception e) {
