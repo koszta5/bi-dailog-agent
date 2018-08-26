@@ -2,10 +2,7 @@ package cz.edu.mendelu.nlp.bidialogagent.pipeline;
 
 import java.util.Optional;
 
-import cz.edu.mendelu.nlp.bidialogagent.model.MetaModelRepresntation;
-import cz.edu.mendelu.nlp.dialogflow.WebHookRequestJson;
-
-public class DialogFlowPipelineProcessor implements PipeLineProcessor {
+public class DialogFlowPipelineProcessor extends  PipeLineProcessorBase implements PipeLineProcessor {
 
 	@Override
 	public void run() {
@@ -31,9 +28,8 @@ public class DialogFlowPipelineProcessor implements PipeLineProcessor {
 	}
 
 	@Override
-	public void process(WebHookRequestJson request, MetaModelRepresntation representation) {
-		// TODO Auto-generated method stub
-		
+	public void process() {
+
 	}
 
 }
