@@ -23,8 +23,7 @@ public class DialogFlowPipelineProcessor extends  PipeLineProcessorBase implemen
 
 	@Override
 	public boolean canStart() {
-		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 	@Override
